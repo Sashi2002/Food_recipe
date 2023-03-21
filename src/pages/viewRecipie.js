@@ -19,8 +19,8 @@ const Vr = () => {
         </div>
         <div className="w-4/12 h-[500px] border-black border-4 ">
           <form className="flex justify-around items-center text-xl my-4">
-            <label className=" text-[#30449e] text-xl">Recipe Name</label>
-            <span className="p-2 px-4 border-solid w-64  border-2 rounded-full">
+            <label className=" text-[#4260e1] text-xl font-bold">Recipe Name</label>
+            <span className="p-2 px-4 border-solid w-64  border-2 rounded-full italic">
               Shahi Panner
             </span>
           </form>
@@ -28,8 +28,8 @@ const Vr = () => {
           <hr className="my-2"></hr>
           <div className="flex justify-between h-96 text-3xl">
             <form className="flex flex-col px-2 w-full">
-              <label className=" text-[#30449e] text-xl">Description</label>
-              <span className="mt-2 p-2 h-full  border-solid border-2 text-[#07C731] text-2xl">
+              <label className=" text-[#4260e1] text-xl font-bold">Description</label>
+              <span className="mt-2 p-2 h-full  border-solid border-2 text-[#4260e1] text-2xl italic">
                 Shahi paneer is very popular in northern India and originated
                 from the Mughlai cuisine. This north Indian dish is liked by
                 most of the people as it is a rich dish filled with spices,

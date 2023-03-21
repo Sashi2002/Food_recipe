@@ -12,8 +12,8 @@ const Non = () => {
             </div>
 
             <div className="absolute hidden mt-4 font-semibold text-white text-m group-hover:block px-14">
-              <span className="">Main Auditorium</span>
-              <p className="mx-2 mt-2">Capacity: 3000</p>
+              <span className="">Chicken Kabab</span>
+              {/*<p className="mx-2 mt-2">Capacity: 3000</p>*/}
             </div>
           </div>
         </div>

@@ -19,11 +19,14 @@ export default function Home() {
           <Recipe />
           <Semi />
           <Non />
+          <Recipe />
         </div>
         <div className="flex justify-around items-center my-16">
-          <Recipe />
           <Semi />
           <Non />
+          <Recipe />
+          <Semi />
+          
         </div>
         <Footer />
       </main>
