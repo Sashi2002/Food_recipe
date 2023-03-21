@@ -2,7 +2,45 @@ import Image from "next/image";
 import Navbar from "../../components/navbar";
 import Item from "../../components/item";
 import Footer from "../../components/footer";
+import React from "react";
+import axios from "axios";
+
 const Sr = () => {
+  const [state, setState] = React.useState({
+    email: "",
+    message: "",
+    file: null,
+  });
+
+  function handleChange(e) {
+    if (e.target.files) {
+      setState({ ...state, [e.target.name]: e.target.files[0] });
+    } else {
+      setState({ ...state, [e.target.name]: e.target.value });
+    }
+  }
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+
+    let formData = new FormData();
+
+    for (let [key, value] of Object.entries(state)) {
+      formData.append(key, value);
+    }
+
+    // Use fetch or axios to submit the form
+    await axios
+      .post("{Formeezy-Endpoint}", formData)
+      .then(({ data }) => {
+        const { redirect } = data;
+        // Redirect used for reCAPTCHA and/or thank you page
+        window.location.href = redirect;
+      })
+      .catch((e) => {
+        window.location.href = e.response.data.redirect;
+      });
+  }
   return (
     <div className="flex flex-col">
       <Navbar />
@@ -10,7 +48,22 @@ const Sr = () => {
         <div className="w-8/12 h-[500px] border-4 flex flex-col justify-between text-3xl">
           <span className="p-3  ">Upload Photos/Videos</span>
           <hr></hr>
-          <div className="flex justify-between h-full text-3xl"></div>
+          <div className="flex flex-col items-center justify-center h-full text-3xl">
+            <form
+              onSubmit={handleSubmit}
+              className="flex flex-col justify-center items-center"
+            >
+              <div className="flex flex-col justify-center items-center ">
+                <input type="file" name="file" onChange={handleChange} />
+                <input
+                  name="bot-field"
+                  type="text"
+                  onChange={handleChange}
+                  style={{ display: "none" }}
+                />
+              </div>
+            </form>
+          </div>
         </div>
         <div className="w-4/12 h-[500px] border-black border-4 ">
           <form className="flex justify-around items-center my-4">
