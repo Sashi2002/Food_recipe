@@ -8,11 +8,7 @@ const Non = () => {
         <div className="flex items-center justify-center w-64 h-64 duration-500 bg-[#A4036F] rounded-lg hover:items-start hover:pt-10 hover:h-96 hover:w-72">
           <div className="relative inline-block transition duration-500 ease-in-out group delay-10 hover:-translate-y-3 hover:scale-110">
             <div className="h-60 w-60">
-              <img
-                src="https://veggiedesserts.com/wp-content/uploads/2021/04/paneer-butter-masala-sq.jpg"
-                className="w-full h-full"
-                alt=""
-              />
+              <img src="/images/ahh.jpg" className="w-full h-full" alt="" />
             </div>
 
             <div className="absolute hidden mt-4 font-semibold text-white text-m group-hover:block px-14">
