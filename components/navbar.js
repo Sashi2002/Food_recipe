@@ -27,19 +27,19 @@ const Navbar = () => {
       <div className="menu w-full flex-grow lg:flex lg:items-center lg:w-auto lg:px-3 px-8">
         <div className="text-md font-bold text-blue-700 lg:flex-grow">
           <a
-            href="#responsive-header"
+            href="/veg"
             className="block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-blue-700 mr-2"
           >
             Veg
           </a>
           <a
-            href="#responsive-header"
+            href="/nonVeg"
             className=" block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-blue-700 mr-2"
           >
             Non-Veg
           </a>
           <a
-            href="#responsive-header"
+            href="/egg"
             className="block mt-4 lg:inline-block lg:mt-0 hover:text-white px-4 py-2 rounded hover:bg-blue-700 mr-2"
           >
             Egg
