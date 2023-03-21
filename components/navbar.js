@@ -1,7 +1,7 @@
-import { useState } from 'react';
-import QRCode from 'react-qr-code';
-import window from 'global/window';
-import { useRouter } from 'next/router';
+import { useState } from "react";
+import QRCode from "react-qr-code";
+import window from "global/window";
+import { useRouter } from "next/router";
 
 // const { asPath } = useRouter();
 
@@ -17,7 +17,7 @@ const Navbar = () => {
   // const URL = `${origin}${router.asPath}`;
   // console.log(URL);
 
-  const [url, setUrl] = useState('sarthak');
+  const [url, setUrl] = useState("sarthak");
 
   const changeHandler = () => {
     changeState(!state);
@@ -29,14 +29,17 @@ const Navbar = () => {
           <QRCode size={256} value="shareRecipe.com" viewBox={`0 0 256 256`} />
         </div>
       ) : (
-        ''
+        ""
       )}
       <nav className="flex items-center justify-between flex-wrap bg-white py-4 lg:px-12 shadow border-solid border-t-2 border-blue-700">
         <div className="flex justify-between lg:w-auto w-full lg:border-b-0 pl-6 pr-2 border-solid border-b-2 border-gray-300 pb-5 lg:pb-0">
           <div className="flex items-center flex-shrink-0 text-gray-800 mr-16">
-            <span className="font-semibold text-xl tracking-tight">
+            <a
+              href="/shareRecipie"
+              className="font-semibold text-xl tracking-tight"
+            >
               Share Your Recipe Today
-            </span>
+            </a>
           </div>
           <div className="block lg:hidden ">
             <button
@@ -83,9 +86,6 @@ const Navbar = () => {
               name="search"
               placeholder="Search"
             />
-            <button type="submit" class="absolute right-0 top-0 mt-3 mr-2">
-              submit
-            </button>
           </div>
           <div class="flex ">
             <a
