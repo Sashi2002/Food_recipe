@@ -5,7 +5,16 @@ const Egg = () => {
   return (
     <div>
       <Navbar />
-      <div>
+      <div className="flex justify-evenly items-center my-8">
+        <Semi />
+        <Semi />
+        <Semi />
+        <Semi />
+      </div>
+      <div className="flex justify-evenly items-center my-8">
+        <Semi />
+        <Semi />
+        <Semi />
         <Semi />
       </div>
       <Footer />

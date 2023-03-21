@@ -6,7 +6,16 @@ const Veg = () => {
   return (
     <div>
       <Navbar />
-      <div>
+      <div className="flex justify-evenly items-center my-8">
+        <Recipe />
+        <Recipe />
+        <Recipe />
+        <Recipe />
+      </div>
+      <div className="flex justify-evenly items-center my-8">
+        <Recipe />
+        <Recipe />
+        <Recipe />
         <Recipe />
       </div>
       <Footer />
