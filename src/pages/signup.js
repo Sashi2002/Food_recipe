@@ -1,11 +1,11 @@
 import React from "react";
 import Image from "next/image";
-import two from "../../public/images/OIP.jpg"
+import two from "../../public/images/sashi.jpg"
 export default function SignUp() {
 return (
     <div className="grid w-full h-screen grid-cols-1 sm:grid-cols-2">
     <div className="hidden sm:block">
-    <Image src={two} className="w-[769px] h-[713px]" alt="food_recipe"></Image>
+    <Image src={two} className="w-[769px] h-[750px]" alt="food_recipe"></Image>
     </div>
 
     <div className="flex flex-col justify-center bg-gray-800">
